@@ -64,8 +64,10 @@
             const seconds = Math.floor((timeDiff / 1000) % 60);
             const minutesUntil = Math.floor((timeDiff / 1000 / 60) % 60);
             const hoursUntil = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
+            const tseconds = Math.floor((timeDiff / 1000));
+            const mise = ((Math.floor(((timeDiff) % 1000)/100)*100)/100);
 
-            return { hours: hoursUntil, minutes: minutesUntil, seconds: seconds, milliseconds: milliseconds };
+            return { hours: hoursUntil, minutes: minutesUntil, seconds: seconds, milliseconds: milliseconds , ts : tseconds , ms: mise};
         }
 
         function showTime() {
@@ -73,7 +75,7 @@
             const { hours, minutes, seconds, milliseconds } = calculateTimeUntil(time, ampm);
             
             // Format the seconds and milliseconds display
-            document.getElementById('TimeSeconds').innerHTML = `${seconds}.${milliseconds.toFixed(1)}s left till`;
+            document.getElementById('TimeSeconds').innerHTML = `${tseconds}.${mise}s left till`;
 
             // Format the remaining time display (hours, minutes, seconds)
             document.getElementById('TimeRemaining').innerHTML = `${hours}h ${minutes}m ${seconds}s left till ${time} ${ampm}`;
