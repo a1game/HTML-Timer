@@ -72,7 +72,7 @@
 
         function showTime() {
             const { time, ampm } = getTimeFromUrl();
-            const { hours, minutes, seconds, milliseconds } = calculateTimeUntil(time, ampm);
+            const { hours, minutes, seconds, milliseconds , tseconds , mise} = calculateTimeUntil(time, ampm);
             
             // Format the seconds and milliseconds display
             document.getElementById('TimeSeconds').innerHTML = `${tseconds}.${mise}s left till`;
