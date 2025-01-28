@@ -67,7 +67,7 @@
             const tseconds = Math.floor((timeDiff / 1000));
             const mise = ((Math.floor(((timeDiff) % 1000)/100)*100)/100);
 
-            return { hours: hoursUntil, minutes: minutesUntil, seconds: seconds, milliseconds: milliseconds , ts : tseconds , ms: mise};
+            return { hours: hoursUntil, minutes: minutesUntil, seconds: seconds, milliseconds: milliseconds , tseconds : tseconds , mise: mise};
         }
 
         function showTime() {
