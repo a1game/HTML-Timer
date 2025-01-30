@@ -30,6 +30,8 @@
         .time-box {
             padding: 1% 2%;
             margin: 10px;
+					box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+	
             background-color: #bccdbc;
             text-align: center;
             font-size: 2em;
@@ -37,18 +39,36 @@
             width: 70%;
         }
         #TimeSeconds {
+					border: 2px solid black;
             background-color: #f8d7da;
         }
         #TimeRemaining {
+						border: 2px solid black;
             background-color: #d4edda;
         }
-			input {
-				corner-radius: 10px;
-				width: 20%;
-				content-align:center;
-				justify-content:center;
-				text-align:center;
-			}
+input {
+    border-radius: 15px;
+    width: 20%;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7); /* Better red shadow with transparency */
+    border: 2px solid black; /* Simplified border property */
+    outline: none;
+    padding: 10px; /* Increaased padding for better spacing */
+    font-size: 2em;
+	margin-bottom:1%;
+    font-family: "Cherry Bomb One", system-ui, sans-serif; /* Fixed font-family declaration */
+    font-weight: 400;
+    font-style: normal;
+    text-align: center; /* Corrected text alignment property */
+    background-color: #A1A1A1; /* Soft grey background */
+    color: #333; /* Dark text color for better contrast */
+    transition: all 0.3s ease; /* Smooth transition effect on focus */
+}
+
+input:focus {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.9); /* Darker shadow on focus */
+    background-color: #f0f0f0; /* Lighter background when focused */
+}
+
     </style>
 </head>
 <body>
